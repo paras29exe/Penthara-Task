@@ -1,16 +1,6 @@
-import { useEffect, useState } from 'react'
 import { FilterIcon } from "lucide-react";
 
-function FilterComponent({ tasks, setFilteredTasks }) {
-    const [filter, setFilter] = useState("all");
-
-    useEffect(() => {
-        setFilteredTasks(
-            filter === "completed" ? tasks.filter(task => task.completed)
-                : filter === "pending" ? tasks.filter(task => !task.completed)
-                    : tasks
-        );
-    }, [filter, tasks]);
+function FilterComponent({ filter, setFilter }) {
 
     return (
         <div className="ml-auto w-fit flex items-center gap-x-3 text-gray-700 dark:text-gray-300 ">

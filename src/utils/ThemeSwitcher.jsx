@@ -11,12 +11,14 @@ export default function ThemeSwitcher() {
         setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
     };
 
+    // Side effect to apply theme whenever there is a change in theme state
     useEffect(() => {
         localStorage.setItem('theme', theme);
         if (theme === 'dark') {
-            document.body.classList.add('dark');
+            // this will add the dark class to the html element for tailwind dark mode to work
+            document.documentElement.classList.add('dark');
         } else {
-            document.body.classList.remove('dark');
+            document.documentElement.classList.remove('dark');
         }
     }, [theme]);
 

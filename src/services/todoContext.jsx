@@ -17,6 +17,7 @@ export const TodoProvider = ({ children }) => {
     });
 
     const addTask = (e) => {
+        // prevent page reload on form submit
         e.preventDefault();
         const text = e.target.task.value.trim();
         if (!text) return; // prevent empty tasks
@@ -36,6 +37,7 @@ export const TodoProvider = ({ children }) => {
     const editTask = (id, newTask) => {
         setTasks((prev) =>
             prev.map((task) =>
+                // target the task to be edited using id and update its text
                 task.id === id ? { ...task, text: newTask } : task
             )
         );
