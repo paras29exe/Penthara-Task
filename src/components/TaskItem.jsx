@@ -28,7 +28,7 @@ export default function TaskItem({ task }) {
     };
 
     return (
-        <div className={`flex items-center w-full p-3 shadow-md rounded-md bg-gray-200 hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors ${task.completed ? ' dark:bg-green-800 dark:hover:bg-green-700 bg-green-300 hover:bg-green-400 ' : ''}`}>
+        <div className={`flex items-center w-full p-3 shadow-md rounded-md bg-gray-300 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 transition-colors ${task.completed ? ' dark:bg-green-800 dark:hover:bg-green-700 bg-green-400 hover:bg-green-500 ' : ''}`}>
             {/* Checkbox */}
             <input
                 type="checkbox"
