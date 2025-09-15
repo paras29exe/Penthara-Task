@@ -15,6 +15,12 @@ function TaskList({ filter }) {
             {filteredTasks.map(task => (
                 <TaskItem key={task.id} task={task} />
             ))}
+
+            {
+                filteredTasks.length === 0 && (
+                    <p className="text-center text-gray-500 dark:text-gray-400 ">No tasks to display. Add a new one.</p>
+                )
+            }
         </div>
     )
 }

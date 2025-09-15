@@ -18,11 +18,13 @@ function App() {
             <ThemeSwitcher />
           </div>
 
-          <h1 className="text-4xl text-center font-bold underline">
+          <h1 className="text-4xl text-center font-medium underline underline-offset-5">
             Track Your Tasks
           </h1>
           {/* input box for adding a new task */}
-          <TaskForm />
+          <div className="mb-20">
+            <TaskForm />
+          </div>
 
           {/* filters component/select box which updates the filter state */}
           <FilterComponent filter={filter} setFilter={setFilter} />
